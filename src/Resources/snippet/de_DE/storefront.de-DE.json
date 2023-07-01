@@ -1,6 +1,11 @@
 {
+    "general": {
+        "deliveryShippingDelay": "Lieferzeit ca. %shippingTime% Werktage"
+    },
+    "header": {
+        "supportInfo": "<strong>Fragen zu Ihrer Bestellung?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Mo-Fr, 9:00 bis 18:00 Uhr</small>"
+    },
     "footer": {
-    
-    "serviceHotline": "FIRST REAL TEST German"
-}
+        "serviceHotline": "Unterstützung und Beratung unter: <a href=\"tel:+4916095625238\">0160/95625238</a> Mo-Fr, 09:00 - 18:00 Uhr"
+    }
 }
