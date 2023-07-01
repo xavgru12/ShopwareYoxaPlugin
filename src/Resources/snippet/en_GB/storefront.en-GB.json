@@ -1,6 +1,11 @@
 {
+    "general": {
+        "deliveryShippingDelay": "Estimated delivery time: %shippingTime% workdays"
+    },
+    "header": {
+        "supportInfo": "<strong>Questions regarding your order?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Monday to Friday from 9:00 am to 6:00 pm</small>"
+    },
     "footer": {
-    
-    "serviceHotline": "FIRST REAL TEST"
-}
+        "serviceHotline": "Support and counselling via: <a href=\"tel:+4916095625238\">0160/95625238</a> Monday to Friday, 9 am - 6 pm"
+    }
 }
