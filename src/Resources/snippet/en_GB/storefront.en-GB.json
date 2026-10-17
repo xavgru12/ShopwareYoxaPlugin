@@ -1,11 +1,19 @@
 {
     "general": {
-        "deliveryShippingDelay": "Estimated delivery time: %shippingTime% workdays"
+        "deliveryShippingDelay": "Estimated delivery time: %shippingTime% workdays",
+        "grossTaxInformation": "All prices plus shipping costs",
+        "netTaxInformation": "All prices plus shipping costs"
     },
     "header": {
         "supportInfo": "<strong>Questions regarding your order?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Monday to Friday from 9:00 am to 6:00 pm</small>"
     },
+    "checkout": {
+        "cartHeaderTaxIncludeVat": "",
+        "cartHeaderTaxExcludeVat": ""
+    },
     "footer": {
-        "serviceHotline": "Support and counselling via: <a href=\"tel:+4916095625238\">0160/95625238</a> Monday to Friday, 9 am - 6 pm"
+        "serviceHotline": "Support and counselling via: <a href=\"tel:+4916095625238\">0160/95625238</a> Monday to Friday, 9 am - 6 pm",
+        "includeVat": "* All prices plus <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise.",
+        "excludeVat": "* All prices plus <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise."
     }
 }
