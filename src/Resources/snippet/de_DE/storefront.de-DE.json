@@ -1,11 +1,19 @@
 {
     "general": {
-        "deliveryShippingDelay": "Lieferzeit ca. %shippingTime% Werktage"
+        "deliveryShippingDelay": "Lieferzeit ca. %shippingTime% Werktage",
+        "grossTaxInformation": "Alle Preise zzgl. Versandkosten",
+        "netTaxInformation": "Alle Preise zzgl. Versandkosten"
     },
     "header": {
         "supportInfo": "<strong>Fragen zu Ihrer Bestellung?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Mo-Fr, 9:00 bis 18:00 Uhr</small>"
     },
+    "checkout": {
+        "cartHeaderTaxIncludeVat": "",
+        "cartHeaderTaxExcludeVat": ""
+    },
     "footer": {
-        "serviceHotline": "Unterstützung und Beratung unter: <a href=\"tel:+4916095625238\">0160/95625238</a> Mo-Fr, 09:00 - 18:00 Uhr"
+        "serviceHotline": "Unterstützung und Beratung unter: <a href=\"tel:+4916095625238\">0160/95625238</a> Mo-Fr, 09:00 - 18:00 Uhr",
+        "includeVat": "* Alle Preise zzgl. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.",
+        "excludeVat": "* Alle Preise zzgl. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben."
     }
 }
