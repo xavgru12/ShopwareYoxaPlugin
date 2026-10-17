@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "shopware/core": "6.4.*"
+        "shopware/core": "~6.7.0"
     },
     "extra": {
         "shopware-plugin-class": "Yoxa\\MyPlugin\\YoxaMyPlugin",

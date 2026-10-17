@@ -14,6 +14,8 @@
     "footer": {
         "serviceHotline": "Support and counselling via: <a href=\"tel:+4916095625238\">0160/95625238</a> Monday to Friday, 9 am - 6 pm",
         "includeVat": "* All prices plus <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise.",
-        "excludeVat": "* All prices plus <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise."
+        "excludeVat": "* All prices plus <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise.",
+        "includeVatTextPage": "All prices plus <a href=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise.",
+        "excludeVatTextPage": "All prices plus <a href=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise."
     }
 }

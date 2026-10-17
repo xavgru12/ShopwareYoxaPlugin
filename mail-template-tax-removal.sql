@@ -151,3 +151,28 @@ INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_
 SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'document.lineItems.inclVAT', '', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+-- ---------------------------------------------------------------------------
+-- Shopware 6.5+ renamed the footer snippet keys (footer.includeVatTextPage /
+-- footer.excludeVatTextPage). Update them as well for shops running 6.5+.
+-- ---------------------------------------------------------------------------
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVatTextPage', 'All prices plus <a href="%url%">shipping costs</a> and possible delivery charges, if not stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'en-GB'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVatTextPage', 'All prices plus <a href="%url%">shipping costs</a> and possible delivery charges, if not stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'en-GB'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVatTextPage', 'Alle Preise zzgl. <a href="%url%">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'de-DE'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVatTextPage', 'Alle Preise zzgl. <a href="%url%">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'de-DE'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
