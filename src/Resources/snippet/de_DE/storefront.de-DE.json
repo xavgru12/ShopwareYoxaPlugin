@@ -13,9 +13,9 @@
     },
     "footer": {
         "serviceHotline": "Unterstützung und Beratung unter: <a href=\"tel:+4916095625238\">0160/95625238</a> Mo-Fr, 09:00 - 18:00 Uhr",
-        "includeVat": "* Alle Preise zzgl. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.",
-        "excludeVat": "* Alle Preise zzgl. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.",
-        "includeVatTextPage": "Alle Preise zzgl. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.",
-        "excludeVatTextPage": "Alle Preise zzgl. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben."
+        "includeVat": "* Alle Preise inkl. gesetzl. MwSt. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
+        "excludeVat": "* Alle Preise inkl. gesetzl. MwSt. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
+        "includeVatTextPage": "Alle Preise inkl. gesetzl. MwSt. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
+        "excludeVatTextPage": "Alle Preise inkl. gesetzl. MwSt. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben."
     }
 }

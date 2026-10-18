@@ -83,12 +83,12 @@ WHERE mty.technical_name = 'order_transaction.state.paid' AND mtt.language_id = 
 -- ---------------------------------------------------------------------------
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVat', '* All prices plus <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">shipping costs</a> and possible delivery charges, if not stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVat', '* All prices incl. VAT. <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">Shipping costs</a> are charged additionally unless stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVat', '* All prices plus <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">shipping costs</a> and possible delivery charges, if not stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVat', '* All prices incl. VAT. <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">Shipping costs</a> are charged additionally unless stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
@@ -118,12 +118,12 @@ FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVat', '* Alle Preise zzgl. <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVat', '* Alle Preise inkl. gesetzl. MwSt. <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVat', '* Alle Preise zzgl. <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVat', '* Alle Preise inkl. gesetzl. MwSt. <a data-toggle="modal" data-bs-toggle="modal" href="%url%" data-url="%url%">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
@@ -158,21 +158,21 @@ ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 -- ---------------------------------------------------------------------------
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVatTextPage', 'All prices plus <a href="%url%">shipping costs</a> and possible delivery charges, if not stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVatTextPage', 'All prices incl. VAT. <a href="%url%">Shipping costs</a> are charged additionally unless stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVatTextPage', 'All prices plus <a href="%url%">shipping costs</a> and possible delivery charges, if not stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVatTextPage', 'All prices incl. VAT. <a href="%url%">Shipping costs</a> are charged additionally unless stated otherwise.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVatTextPage', 'Alle Preise zzgl. <a href="%url%">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.includeVatTextPage', 'Alle Preise inkl. gesetzl. MwSt. <a href="%url%">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVatTextPage', 'Alle Preise zzgl. <a href="%url%">Versandkosten</a> und ggf. Nachnahmegebühren, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVatTextPage', 'Alle Preise inkl. gesetzl. MwSt. <a href="%url%">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
