@@ -1,8 +1,8 @@
 {
     "general": {
         "deliveryShippingDelay": "Estimated delivery time: %shippingTime% workdays",
-        "grossTaxInformation": "All prices plus shipping costs",
-        "netTaxInformation": "All prices plus shipping costs"
+        "grossTaxInformation": "Prices incl. VAT, excl. <a href=\"%url%\" data-ajax-modal=\"true\" data-url=\"%url%\" class=\"btn btn-link-inline p-0 fs-6\">shipping costs</a>",
+        "netTaxInformation": "Prices incl. VAT, excl. <a href=\"%url%\" data-ajax-modal=\"true\" data-url=\"%url%\" class=\"btn btn-link-inline p-0 fs-6\">shipping costs</a>"
     },
     "header": {
         "supportInfo": "<strong>Questions regarding your order?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Monday to Friday from 9:00 am to 6:00 pm</small>"

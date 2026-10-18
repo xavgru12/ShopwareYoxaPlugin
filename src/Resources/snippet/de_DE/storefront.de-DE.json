@@ -1,8 +1,8 @@
 {
     "general": {
         "deliveryShippingDelay": "Lieferzeit ca. %shippingTime% Werktage",
-        "grossTaxInformation": "Alle Preise zzgl. Versandkosten",
-        "netTaxInformation": "Alle Preise zzgl. Versandkosten"
+        "grossTaxInformation": "Preise inkl. MwSt., zzgl. <a href=\"%url%\" data-ajax-modal=\"true\" data-url=\"%url%\" class=\"btn btn-link-inline p-0 fs-6\">Versandkosten</a>",
+        "netTaxInformation": "Preise inkl. MwSt., zzgl. <a href=\"%url%\" data-ajax-modal=\"true\" data-url=\"%url%\" class=\"btn btn-link-inline p-0 fs-6\">Versandkosten</a>"
     },
     "header": {
         "supportInfo": "<strong>Fragen zu Ihrer Bestellung?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Mo-Fr, 9:00 bis 18:00 Uhr</small>"

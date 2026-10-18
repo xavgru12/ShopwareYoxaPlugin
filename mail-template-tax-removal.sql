@@ -93,12 +93,12 @@ FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.grossTaxInformation', 'All prices plus shipping costs', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.grossTaxInformation', 'Prices incl. VAT, excl. <a href="%url%" data-ajax-modal="true" data-url="%url%" class="btn btn-link-inline p-0 fs-6">shipping costs</a>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.netTaxInformation', 'All prices plus shipping costs', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.netTaxInformation', 'Prices incl. VAT, excl. <a href="%url%" data-ajax-modal="true" data-url="%url%" class="btn btn-link-inline p-0 fs-6">shipping costs</a>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'en-GB'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
@@ -128,12 +128,12 @@ FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.grossTaxInformation', 'Alle Preise zzgl. Versandkosten', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.grossTaxInformation', 'Preise inkl. MwSt., zzgl. <a href="%url%" data-ajax-modal="true" data-url="%url%" class="btn btn-link-inline p-0 fs-6">Versandkosten</a>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
 INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
-SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.netTaxInformation', 'Alle Preise zzgl. Versandkosten', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'general.netTaxInformation', 'Preise inkl. MwSt., zzgl. <a href="%url%" data-ajax-modal="true" data-url="%url%" class="btn btn-link-inline p-0 fs-6">Versandkosten</a>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
 
