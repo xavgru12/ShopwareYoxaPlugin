@@ -176,3 +176,30 @@ INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_
 SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.excludeVatTextPage', 'Alle Preise inkl. gesetzl. MwSt. <a href="%url%">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+-- ---------------------------------------------------------------------------
+-- Support contact: e-mail instead of the service hotline. The %email%
+-- placeholder is filled per sales channel by the storefront templates
+-- (layout/header/header-minimal.html.twig, layout/footer/footer.html.twig):
+-- uberstrike host -> hello@uberstrike.com, anything else -> hello@yoxa.eu.
+-- ---------------------------------------------------------------------------
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'header.supportInfo', '<strong>Questions regarding your order?</strong><br /><strong><a href="mailto:%email%">%email%</a></strong>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'en-GB'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.serviceHotline', 'Support and counselling via: <a href="mailto:%email%">%email%</a>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'en-GB'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'header.supportInfo', '<strong>Fragen zu Ihrer Bestellung?</strong><br /><strong><a href="mailto:%email%">%email%</a></strong>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'de-DE'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.serviceHotline', 'Unterstützung und Beratung unter: <a href="mailto:%email%">%email%</a>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'de-DE'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
