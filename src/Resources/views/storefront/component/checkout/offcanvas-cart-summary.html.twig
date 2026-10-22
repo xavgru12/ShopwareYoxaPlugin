@@ -1,0 +1,14 @@
+{% sw_extends '@Storefront/storefront/component/checkout/offcanvas-cart-summary.html.twig' %}
+
+{% block component_offcanvas_summary_tax_info %}
+    {% set shippingUrl = path('frontend.cms.page', { id: config('core.basicInformation.shippingPaymentInfoPage') }) %}
+    <p class="offcanvas-cart-tax">
+        <small>
+            {% if page.cart.price.taxStatus == 'gross' %}
+                {{ 'general.grossTaxInformation'|trans({'%url%': shippingUrl})|raw }}
+            {% else %}
+                {{ 'general.netTaxInformation'|trans({'%url%': shippingUrl})|raw }}
+            {% endif %}
+        </small>
+    </p>
+{% endblock %}

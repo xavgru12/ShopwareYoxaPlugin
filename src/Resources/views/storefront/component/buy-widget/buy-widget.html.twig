@@ -1,0 +1,15 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget.html.twig' %}
+
+{% block buy_widget_tax %}
+    <div class="product-detail-tax-container">
+        {% set shippingUrl = path('frontend.cms.page', { id: config('core.basicInformation.shippingPaymentInfoPage') }) %}
+
+        <p class="product-detail-tax">
+            {% if context.taxState == 'gross' %}
+                {{ 'general.grossTaxInformation'|trans({'%url%': shippingUrl})|raw }}
+            {% else %}
+                {{ 'general.netTaxInformation'|trans({'%url%': shippingUrl})|raw }}
+            {% endif %}
+        </p>
+    </div>
+{% endblock %}

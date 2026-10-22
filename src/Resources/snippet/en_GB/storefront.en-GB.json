@@ -1,8 +1,8 @@
 {
     "general": {
         "deliveryShippingDelay": "Estimated delivery time: %shippingTime% workdays",
-        "grossTaxInformation": "All prices plus shipping costs",
-        "netTaxInformation": "All prices plus shipping costs"
+        "grossTaxInformation": "Prices incl. VAT, excl. <a href=\"%url%\" data-ajax-modal=\"true\" data-url=\"%url%\" class=\"btn btn-link-inline p-0 fs-6\">shipping costs</a>",
+        "netTaxInformation": "Prices incl. VAT, excl. <a href=\"%url%\" data-ajax-modal=\"true\" data-url=\"%url%\" class=\"btn btn-link-inline p-0 fs-6\">shipping costs</a>"
     },
     "header": {
         "supportInfo": "<strong>Questions regarding your order?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Monday to Friday from 9:00 am to 6:00 pm</small>"
@@ -13,7 +13,9 @@
     },
     "footer": {
         "serviceHotline": "Support and counselling via: <a href=\"tel:+4916095625238\">0160/95625238</a> Monday to Friday, 9 am - 6 pm",
-        "includeVat": "* All prices plus <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise.",
-        "excludeVat": "* All prices plus <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">shipping costs</a> and possible delivery charges, if not stated otherwise."
+        "includeVat": "* All prices incl. VAT. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Shipping costs</a> are charged additionally unless stated otherwise.",
+        "excludeVat": "* All prices incl. VAT. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Shipping costs</a> are charged additionally unless stated otherwise.",
+        "includeVatTextPage": "All prices incl. VAT. <a href=\"%url%\">Shipping costs</a> are charged additionally unless stated otherwise.",
+        "excludeVatTextPage": "All prices incl. VAT. <a href=\"%url%\">Shipping costs</a> are charged additionally unless stated otherwise."
     }
 }
