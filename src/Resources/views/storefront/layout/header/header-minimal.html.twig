@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/layout/header/header-minimal.html.twig' %}
+
+{% block layout_header_minimal_contact %}
+    {% set supportEmail = 'hello@uberstrike.com' %}
+    {% if 'uberstrike' not in app.request.host|lower %}
+        {% set supportEmail = 'hello@yoxa.eu' %}
+    {% endif %}
+
+    <div class="col-md-4 header-minimal-contact">
+        {{ 'header.supportInfo'|trans({ '%email%': supportEmail })|sw_sanitize }}
+    </div>
+{% endblock %}

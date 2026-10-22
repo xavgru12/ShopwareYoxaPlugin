@@ -8,3 +8,93 @@
             {% endblock %}
 
 {% block layout_footer_vat %}{% endblock %}
+
+{% block layout_footer_navigation_hotline_content %}
+    {% set supportEmail = 'hello@uberstrike.com' %}
+    {% if 'uberstrike' not in app.request.host|lower %}
+        {% set supportEmail = 'hello@yoxa.eu' %}
+    {% endif %}
+
+    {% set cmsPath = 'frontend.cms.page.full' %}
+
+    <div id="collapseFooterHotline"
+         class="footer-column-content collapse js-footer-column-content footer-contact mb-4 mb-md-0"
+         aria-labelledby="collapseFooterHotlineTitle">
+
+        <div class="footer-column-content-inner">
+            <p class="footer-contact-hotline">
+                {{ 'footer.serviceHotline'|trans({ '%email%': supportEmail })|sw_sanitize }}
+            </p>
+        </div>
+
+        <div class="footer-contact-form">
+            {% set contactSnippetKey = 'footer.serviceContactTextPage' %}
+            {% set contactCmsPageId = config('core.basicInformation.contactPage') %}
+            {% set contactUrl = contactCmsPageId ? path(cmsPath, { id: contactCmsPageId }) : '#' %}
+
+            {# Check for seoUrl and use it if present #}
+            {% for serviceMenuItem in footer.serviceMenu %}
+                {% if serviceMenuItem.cmsPageId == contactCmsPageId and serviceMenuItem.seoUrl %}
+                    {% set contactUrl = serviceMenuItem.seoUrl %}
+                {% endif %}
+            {% endfor %}
+
+            {# Check footer navigation #}
+            {% if footer.navigation and footer.navigation.tree %}
+                {% for root in footer.navigation.tree %}
+                    {% if root.category.cmsPageId == contactCmsPageId and root.category.seoUrl %}
+                        {% set contactUrl = root.category.seoUrl %}
+                    {% endif %}
+
+                    {% for footerItem in root.children %}
+                        {% if footerItem.category.cmsPageId == contactCmsPageId and footerItem.category.seoUrl %}
+                            {% set contactUrl = footerItem.category.seoUrl %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+
+            {{ contactSnippetKey|trans({
+                '%url%': contactUrl
+            })|raw }}
+        </div>
+
+        {% block layout_footer_navigation_revocation_button %}
+            {% set revocationRequestSnippetKey = 'footer.serviceRevocationRequestTextPage' %}
+            {% set revocationRequestCmsPageId = config('core.basicInformation.revocationRequestPage') %}
+            {% set showRevocationButton = config('core.basicInformation.showRevocationButton') %}
+
+            {% if revocationRequestCmsPageId and showRevocationButton %}
+                {% set revocationRequestUrl = revocationRequestCmsPageId ? path(cmsPath, { id: revocationRequestCmsPageId }) : '#' %}
+
+                {# Check for seoUrl and use it if present #}
+                {% for serviceMenuItem in footer.serviceMenu %}
+                    {% if serviceMenuItem.cmsPageId == revocationRequestCmsPageId and serviceMenuItem.seoUrl %}
+                        {% set revocationRequestUrl = serviceMenuItem.seoUrl %}
+                    {% endif %}
+                {% endfor %}
+
+                {# Check footer navigation #}
+                {% if footer.navigation and footer.navigation.tree %}
+                    {% for root in footer.navigation.tree %}
+                        {% if root.category.cmsPageId == revocationRequestCmsPageId and root.category.seoUrl %}
+                            {% set revocationRequestUrl = root.category.seoUrl %}
+                        {% endif %}
+
+                        {% for footerItem in root.children %}
+                            {% if footerItem.category.cmsPageId == revocationRequestCmsPageId and footerItem.category.seoUrl %}
+                                {% set revocationRequestUrl = footerItem.category.seoUrl %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                {% endif %}
+
+                <div class="footer-revocation-button mt-4">
+                    {{ revocationRequestSnippetKey|trans({
+                        '%url%': revocationRequestUrl
+                    })|raw }}
+                </div>
+            {% endif %}
+        {% endblock %}
+    </div>
+{% endblock %}

@@ -5,14 +5,14 @@
         "netTaxInformation": "Preise inkl. MwSt., zzgl. <a href=\"%url%\" data-ajax-modal=\"true\" data-url=\"%url%\" class=\"btn btn-link-inline p-0 fs-6\">Versandkosten</a>"
     },
     "header": {
-        "supportInfo": "<strong>Fragen zu Ihrer Bestellung?</strong><br /><strong><a href=\"tel:+4916095625238\">0160/95625238</a></strong> <small>Mo-Fr, 9:00 bis 18:00 Uhr</small>"
+        "supportInfo": "<strong>Fragen zu Ihrer Bestellung?</strong><br /><strong><a href=\"mailto:%email%\">%email%</a></strong>"
     },
     "checkout": {
         "cartHeaderTaxIncludeVat": "",
         "cartHeaderTaxExcludeVat": ""
     },
     "footer": {
-        "serviceHotline": "Unterstützung und Beratung unter: <a href=\"tel:+4916095625238\">0160/95625238</a> Mo-Fr, 09:00 - 18:00 Uhr",
+        "serviceHotline": "Unterstützung und Beratung unter: <a href=\"mailto:%email%\">%email%</a>",
         "includeVat": "* Alle Preise inkl. gesetzl. MwSt. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
         "excludeVat": "* Alle Preise inkl. gesetzl. MwSt. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
         "includeVatTextPage": "Alle Preise inkl. gesetzl. MwSt. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
