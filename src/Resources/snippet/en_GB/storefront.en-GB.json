@@ -13,6 +13,8 @@
     },
     "footer": {
         "serviceHotline": "Support and counselling via: <a href=\"mailto:%email%\">%email%</a>",
+        "serviceMenuTos": "Terms of service",
+        "serviceMenuRevocation": "Right of rescission",
         "includeVat": "* All prices incl. VAT. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Shipping costs</a> are charged additionally unless stated otherwise.",
         "excludeVat": "* All prices incl. VAT. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Shipping costs</a> are charged additionally unless stated otherwise.",
         "includeVatTextPage": "All prices incl. VAT. <a href=\"%url%\">Shipping costs</a> are charged additionally unless stated otherwise.",

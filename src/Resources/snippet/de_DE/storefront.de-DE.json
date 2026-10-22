@@ -13,6 +13,8 @@
     },
     "footer": {
         "serviceHotline": "Unterstützung und Beratung unter: <a href=\"mailto:%email%\">%email%</a>",
+        "serviceMenuTos": "AGB",
+        "serviceMenuRevocation": "Widerruf",
         "includeVat": "* Alle Preise inkl. gesetzl. MwSt. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
         "excludeVat": "* Alle Preise inkl. gesetzl. MwSt. <a data-toggle=\"modal\" data-bs-toggle=\"modal\" href=\"%url%\" data-url=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",
         "includeVatTextPage": "Alle Preise inkl. gesetzl. MwSt. <a href=\"%url%\">Versandkosten</a> und ggf. Nachnahmegebühren werden zusätzlich berechnet, wenn nicht anders angegeben.",

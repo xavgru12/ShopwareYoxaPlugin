@@ -9,6 +9,37 @@
 
 {% block layout_footer_vat %}{% endblock %}
 
+{% block layout_footer_service_menu %}
+    {% set cmsPath = 'frontend.cms.page.full' %}
+    <div class="container">
+        {% block layout_footer_service_menu_content %}
+            <ul class="footer-service-menu-list list-unstyled d-flex flex-wrap justify-content-center">
+                {% set serviceMenuPages = [
+                    { configKey: 'core.basicInformation.tosPage', label: 'yoxa.footer.serviceMenuTos' },
+                    { configKey: 'core.basicInformation.privacyPage', label: 'general.privacyLink' },
+                    { configKey: 'core.basicInformation.imprintPage', label: 'general.imprintLink' },
+                    { configKey: 'core.basicInformation.revocationPage', label: 'yoxa.footer.serviceMenuRevocation' }
+                ] %}
+
+                {% for serviceMenuPage in serviceMenuPages %}
+                    {% set pageId = config(serviceMenuPage.configKey) %}
+                    {% if pageId %}
+                        {% block layout_footer_service_menu_item %}
+                            <li class="footer-service-menu-item">
+                                <a class="footer-service-menu-link"
+                                   href="{{ path(cmsPath, { id: pageId }) }}"
+                                   title="{{ serviceMenuPage.label|trans|striptags }}">
+                                    {{ serviceMenuPage.label|trans|sw_sanitize }}
+                                </a>
+                            </li>
+                        {% endblock %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endblock %}
+    </div>
+{% endblock %}
+
 {% block layout_footer_navigation_hotline_content %}
     {% set supportEmail = 'hello@uberstrike.com' %}
     {% if 'uberstrike' not in app.request.host|lower %}

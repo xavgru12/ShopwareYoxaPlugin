@@ -203,3 +203,28 @@ INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_
 SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'footer.serviceHotline', 'Unterstützung und Beratung unter: <a href="mailto:%email%">%email%</a>', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
 FROM snippet_set ss WHERE ss.iso = 'de-DE'
 ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+-- ---------------------------------------------------------------------------
+-- Footer service menu labels (the menu itself is rendered by the plugin's
+-- layout/footer/footer.html.twig from core.basicInformation.*Page).
+-- ---------------------------------------------------------------------------
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'yoxa.footer.serviceMenuTos', 'Terms of service', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'en-GB'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'yoxa.footer.serviceMenuRevocation', 'Right of rescission', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'en-GB'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'yoxa.footer.serviceMenuTos', 'AGB', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'de-DE'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
+
+INSERT INTO snippet (id, snippet_set_id, translation_key, value, author, custom_fields, created_at, updated_at)
+SELECT UNHEX(REPLACE(UUID(), '-', '')), ss.id, 'yoxa.footer.serviceMenuRevocation', 'Widerruf', 'YoxaMyPlugin', NULL, NOW(3), NOW(3)
+FROM snippet_set ss WHERE ss.iso = 'de-DE'
+ON DUPLICATE KEY UPDATE value = VALUES(value), updated_at = NOW(3);
